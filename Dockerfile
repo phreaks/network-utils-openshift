@@ -1,8 +1,7 @@
-FROM ubuntu:bionic
+FROM alpine:3.10.1
 
-RUN apt-get update \
-  && apt-get install --no-install-recommends --yes --force-yes \
-    locales \
+RUN apk update && apk upgrade && \
+    apk add --no-cache locales \
     bind9-host \
     curl \
     dnsutils \
@@ -16,4 +15,3 @@ RUN apt-get update \
     nano \
     wget \
     openssh-client
-
