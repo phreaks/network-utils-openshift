@@ -17,6 +17,3 @@ RUN apt-get update \
     wget \
     openssh-client
 
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-
